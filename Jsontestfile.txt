@@ -1,0 +1,62 @@
+http://localhost:9090/h2-console
+
+
+1️⃣ Add a New Expense (POST)
+URL: http://localhost:9090/api/expenses
+Body (JSON):
+
+json:
+
+{
+  "description": "Grocery Shopping",
+  "amount": 1500.50,
+  "date": "2024-10-16",
+  "category": "Food"
+}
+
+2. Get All Expenses
+URL: GET http://localhost:9090/api/expenses
+
+3. Get Expense by ID (GET Request)
+URL: http://localhost:9090/api/expenses/1
+
+4. Update an Expense (PUT Request)
+URL: http://localhost:9090/api/expenses/1
+
+JSON:
+{
+  "description": "Supermarket Shopping",
+  "amount": 1800.00,
+  "date": "2024-10-18",
+  "category": "Food"
+}
+
+5.  Delete an Expense (DELETE Request)
+URL: http://localhost:9090/api/expenses/1
+
+
+--------------------------------
+
+📌 Example JWT Token:
+{
+  "sub": "john_doe",          // This is the username (subject)
+  "iat": 1710514823,          // Issued at (when the token was created)
+  "exp": 1710550823           // Expiration time (when the token will expire)
+}
+
+🧪 Example Usage (for Testing in Postman or any tool):
+Generate Token:
+
+Send a POST request to /api/auth/login with valid user credentials.
+
+The server will respond with a JWT like:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZSIsImlhdCI6MTcxMDUxNDgyMywiZXhwIjoxNzEwNTUwODIzfQ.abc123"
+}
+
+Access Secure Endpoint:
+
+Include the token in the Authorization header:
+Authorization: Bearer YOUR_JWT_TOKEN
+The server will validate the token and allow access if it’s valid.
