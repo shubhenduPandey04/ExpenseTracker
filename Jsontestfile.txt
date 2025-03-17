@@ -1,11 +1,10 @@
+H2 Database link:
 http://localhost:9090/h2-console
 
 
 1️⃣ Add a New Expense (POST)
 URL: http://localhost:9090/api/expenses
 Body (JSON):
-
-json:
 
 {
   "description": "Grocery Shopping",
@@ -33,7 +32,6 @@ JSON:
 
 5.  Delete an Expense (DELETE Request)
 URL: http://localhost:9090/api/expenses/1
-
 
 --------------------------------
 
